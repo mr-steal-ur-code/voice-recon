@@ -17,6 +17,10 @@ export namespace Components {
     interface PageProfile {
         "name": string;
     }
+    interface RpdEast {
+    }
+    interface TestOnly {
+    }
 }
 declare global {
     interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
@@ -49,12 +53,26 @@ declare global {
         prototype: HTMLPageProfileElement;
         new (): HTMLPageProfileElement;
     };
+    interface HTMLRpdEastElement extends Components.RpdEast, HTMLStencilElement {
+    }
+    var HTMLRpdEastElement: {
+        prototype: HTMLRpdEastElement;
+        new (): HTMLRpdEastElement;
+    };
+    interface HTMLTestOnlyElement extends Components.TestOnly, HTMLStencilElement {
+    }
+    var HTMLTestOnlyElement: {
+        prototype: HTMLTestOnlyElement;
+        new (): HTMLTestOnlyElement;
+    };
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
         "app-tabs": HTMLAppTabsElement;
         "page-home": HTMLPageHomeElement;
         "page-notice": HTMLPageNoticeElement;
         "page-profile": HTMLPageProfileElement;
+        "rpd-east": HTMLRpdEastElement;
+        "test-only": HTMLTestOnlyElement;
     }
 }
 declare namespace LocalJSX {
@@ -69,12 +87,18 @@ declare namespace LocalJSX {
     interface PageProfile {
         "name"?: string;
     }
+    interface RpdEast {
+    }
+    interface TestOnly {
+    }
     interface IntrinsicElements {
         "app-root": AppRoot;
         "app-tabs": AppTabs;
         "page-home": PageHome;
         "page-notice": PageNotice;
         "page-profile": PageProfile;
+        "rpd-east": RpdEast;
+        "test-only": TestOnly;
     }
 }
 export { LocalJSX as JSX };
@@ -86,6 +110,8 @@ declare module "@stencil/core" {
             "page-home": LocalJSX.PageHome & JSXBase.HTMLAttributes<HTMLPageHomeElement>;
             "page-notice": LocalJSX.PageNotice & JSXBase.HTMLAttributes<HTMLPageNoticeElement>;
             "page-profile": LocalJSX.PageProfile & JSXBase.HTMLAttributes<HTMLPageProfileElement>;
+            "rpd-east": LocalJSX.RpdEast & JSXBase.HTMLAttributes<HTMLRpdEastElement>;
+            "test-only": LocalJSX.TestOnly & JSXBase.HTMLAttributes<HTMLTestOnlyElement>;
         }
     }
 }

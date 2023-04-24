@@ -1,0 +1,13 @@
+/*css contol every element of type call-example*/
+test-only div {
+    background-color: aqua;
+}
+/*css class example*/
+test-only .red {
+    color:brown
+}
+/*css id example*/
+#blue {
+color:blue
+}
+

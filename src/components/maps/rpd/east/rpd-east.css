@@ -1,0 +1,10 @@
+rpd-east span {
+    position:absolute;
+    display:block;
+    background:#b32020;
+}
+rpd-east .clock {
+    position:relative;
+    display:block;
+    border:1px solid black;
+}
