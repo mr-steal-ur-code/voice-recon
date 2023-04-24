@@ -3,8 +3,8 @@ import { Config } from '@stencil/core';
 // https://stenciljs.com/docs/config
 
 export const config: Config = {
-  globalStyle: 'src/app.css',
-  globalScript: 'src/app.ts',
+  globalStyle: 'src/global.css',
+  globalScript: 'src/global.ts',
   taskQueue: 'async',
   outputTargets: [
     {
