@@ -1,6 +1,6 @@
 export default {
   env: 'live',
-  url: 'https://',
+  url: 'https://voice-recon-d7491.web.app/',
   firebase: {
     apiKey: 'AIzaSyCAA7Om2X_KRlSXrHZ3_pTZbxGLvXx4lYc',
     authDomain: 'voice-recon-d7491.firebaseapp.com',

@@ -2,5 +2,43 @@
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+    "public": "www",
+    "ignore": [
+      "firebase.json",
+      "**/node_modules/**"
+    ],
+    "trailingSlash": false,
+    "rewrites": [
+      {
+        "source": "/oauth/**",
+        "function": "oauth"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "/build/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31556952, s-maxage=31556952, immutable"
+          }
+        ]
+      },
+      {
+        "source": "sw.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      }
+    ]
   }
 }

@@ -1,25 +1,20 @@
 {
   "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
     "allowUnreachableCode": false,
     "declaration": false,
     "experimentalDecorators": true,
-    "lib": [
-      "dom",
-      "es2015"
-    ],
+    "lib": ["dom", "es2018", "esnext.asynciterable"],
     "moduleResolution": "node",
     "module": "esnext",
-    "target": "es2017",
+    "target": "es2018",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "jsx": "react",
     "jsxFactory": "h"
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
