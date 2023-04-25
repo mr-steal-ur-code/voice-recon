@@ -6,16 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AppRoot {
+    interface AppHome {
     }
-    interface AppTabs {
-    }
-    interface PageHome {
-    }
-    interface PageNotice {
-    }
-    interface PageProfile {
-        "name": string;
+    interface AppRouter {
     }
     interface RpdEast {
     }
@@ -23,35 +16,17 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
+    interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
     }
-    var HTMLAppRootElement: {
-        prototype: HTMLAppRootElement;
-        new (): HTMLAppRootElement;
+    var HTMLAppHomeElement: {
+        prototype: HTMLAppHomeElement;
+        new (): HTMLAppHomeElement;
     };
-    interface HTMLAppTabsElement extends Components.AppTabs, HTMLStencilElement {
+    interface HTMLAppRouterElement extends Components.AppRouter, HTMLStencilElement {
     }
-    var HTMLAppTabsElement: {
-        prototype: HTMLAppTabsElement;
-        new (): HTMLAppTabsElement;
-    };
-    interface HTMLPageHomeElement extends Components.PageHome, HTMLStencilElement {
-    }
-    var HTMLPageHomeElement: {
-        prototype: HTMLPageHomeElement;
-        new (): HTMLPageHomeElement;
-    };
-    interface HTMLPageNoticeElement extends Components.PageNotice, HTMLStencilElement {
-    }
-    var HTMLPageNoticeElement: {
-        prototype: HTMLPageNoticeElement;
-        new (): HTMLPageNoticeElement;
-    };
-    interface HTMLPageProfileElement extends Components.PageProfile, HTMLStencilElement {
-    }
-    var HTMLPageProfileElement: {
-        prototype: HTMLPageProfileElement;
-        new (): HTMLPageProfileElement;
+    var HTMLAppRouterElement: {
+        prototype: HTMLAppRouterElement;
+        new (): HTMLAppRouterElement;
     };
     interface HTMLRpdEastElement extends Components.RpdEast, HTMLStencilElement {
     }
@@ -66,37 +41,24 @@ declare global {
         new (): HTMLTestOnlyElement;
     };
     interface HTMLElementTagNameMap {
-        "app-root": HTMLAppRootElement;
-        "app-tabs": HTMLAppTabsElement;
-        "page-home": HTMLPageHomeElement;
-        "page-notice": HTMLPageNoticeElement;
-        "page-profile": HTMLPageProfileElement;
+        "app-home": HTMLAppHomeElement;
+        "app-router": HTMLAppRouterElement;
         "rpd-east": HTMLRpdEastElement;
         "test-only": HTMLTestOnlyElement;
     }
 }
 declare namespace LocalJSX {
-    interface AppRoot {
+    interface AppHome {
     }
-    interface AppTabs {
-    }
-    interface PageHome {
-    }
-    interface PageNotice {
-    }
-    interface PageProfile {
-        "name"?: string;
+    interface AppRouter {
     }
     interface RpdEast {
     }
     interface TestOnly {
     }
     interface IntrinsicElements {
-        "app-root": AppRoot;
-        "app-tabs": AppTabs;
-        "page-home": PageHome;
-        "page-notice": PageNotice;
-        "page-profile": PageProfile;
+        "app-home": AppHome;
+        "app-router": AppRouter;
         "rpd-east": RpdEast;
         "test-only": TestOnly;
     }
@@ -105,11 +67,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
-            "app-tabs": LocalJSX.AppTabs & JSXBase.HTMLAttributes<HTMLAppTabsElement>;
-            "page-home": LocalJSX.PageHome & JSXBase.HTMLAttributes<HTMLPageHomeElement>;
-            "page-notice": LocalJSX.PageNotice & JSXBase.HTMLAttributes<HTMLPageNoticeElement>;
-            "page-profile": LocalJSX.PageProfile & JSXBase.HTMLAttributes<HTMLPageProfileElement>;
+            "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+            "app-router": LocalJSX.AppRouter & JSXBase.HTMLAttributes<HTMLAppRouterElement>;
             "rpd-east": LocalJSX.RpdEast & JSXBase.HTMLAttributes<HTMLRpdEastElement>;
             "test-only": LocalJSX.TestOnly & JSXBase.HTMLAttributes<HTMLTestOnlyElement>;
         }

@@ -1,11 +1,11 @@
 import { Component, Fragment, h, State } from '@stencil/core';
 
 @Component({
-  tag: 'page-home',
-  styleUrl: 'page-home.css',
+  tag: 'app-home',
+  styleUrl: 'app-home.css',
   // shadow: true,
 })
-export class PageHome {
+export class AppHome {
   @State() mode: string;
 
   constructor() {
@@ -38,8 +38,10 @@ export class PageHome {
           </ion-toolbar>
         </ion-header>
         <ion-content class="ion-padding">
+          <ion-router-link style={{ fontSize: '30px', fontWeight: 'bolder', color: 'var(--ion-color-secondary)' }} href="/map">
+            Map
+          </ion-router-link>
           <test-only></test-only>
-          <rpd-east></rpd-east>
         </ion-content>
       </Fragment>
     );
